@@ -83,5 +83,10 @@ $spacing: (
   500: 2.5rem
 );
 
+// Returns spacing token value from $spacing map
+@function spacing($size) {
+  @return map.get($spacing, $size);
+}
+
 
 
