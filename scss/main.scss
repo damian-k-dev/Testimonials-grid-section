@@ -24,22 +24,19 @@ body {
 }
 
 .wrapper {
-    
-    
-    
-    min-height: 100vh;
-    background: linear-gradient(
-        to right,
-        white 0%,
-        white 15%,
-        rgb(250, 250, 250) 20%,
-        rgb(250, 250, 250) 100%
-        );
 
         @include mq(desktop) {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(
+            to right,
+            white 0%,
+            white 15%,
+            rgb(250, 250, 250) 20%,
+            rgb(250, 250, 250) 100%
+        );
         }
 
         .testimonials-grid {
