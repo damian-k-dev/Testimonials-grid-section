@@ -94,7 +94,7 @@ body {
 }
 @media (min-width: 64rem) {
   .wrapper .testimonials-grid {
-    max-width: 64rem;
+    max-width: 75rem;
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
@@ -122,6 +122,9 @@ body {
 }
 .wrapper .testimonial--purple .testimonial__body {
   color: hsl(260, 100%, 95%);
+}
+.wrapper .testimonial--purple .testimonial__subject {
+  z-index: 1;
 }
 .wrapper .testimonial--grey {
   background-color: hsl(217, 19%, 35%);
@@ -172,6 +175,23 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+}
+.wrapper .testimonial__quote {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .wrapper .testimonial__quote {
+    display: block;
+    position: absolute;
+    top: -60%;
+    right: 15%;
+  }
+}
+@media (min-width: 64rem) {
+  .wrapper .testimonial__quote {
+    right: 10%;
+  }
 }
 .wrapper .testimonial__avatar {
   width: 40px;

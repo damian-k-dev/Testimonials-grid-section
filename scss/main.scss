@@ -57,7 +57,7 @@ body {
     }
 
     @include mq(desktop) {
-        max-width: 64rem;
+        max-width: 75rem;
         display: grid;
         gap: spacing(300);
         grid-template-columns: repeat(4, 1fr);
@@ -86,6 +86,10 @@ body {
         }
         .testimonial__body {
             color: map.get($colors-primary, purple-50);
+        }
+
+        .testimonial__subject {
+            z-index: 1;
         }
     }
 
@@ -154,6 +158,22 @@ body {
         display: flex;
         align-items: center;
         gap: spacing(100);
+        position: relative;
+    }
+
+    &__quote {
+        display: none;
+    
+    @include mq(tablet) {
+        display: block;
+        position: absolute;
+        top: -60%;
+        right: 15%;
+    }
+    @include mq(desktop) {
+        right: 10%;
+    }
+    
     }
     
     &__avatar {
